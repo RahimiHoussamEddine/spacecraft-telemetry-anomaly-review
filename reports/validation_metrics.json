@@ -1,0 +1,76 @@
+{
+  "protocol": {
+    "official_train_segments": 1594,
+    "official_test_segments_locked": 529,
+    "internal_training_segments": 1275,
+    "internal_validation_segments": 319,
+    "internal_split_seed": 2026,
+    "threshold_objective": "validation F1; ties choose the more conservative threshold",
+    "model_selection": "highest validation average precision among the three declared approaches",
+    "test_used_for_selection": false,
+    "nominal_only_fit_segments": 1018
+  },
+  "selected_model": "supervised_logistic",
+  "selected_logistic_c": 10.0,
+  "logistic_candidate_validation_ap": {
+    "10.0": 0.8842543398793459,
+    "1.0": 0.8637615252571654,
+    "0.1": 0.8059006050735029
+  },
+  "validation": {
+    "robust_deviation": {
+      "threshold": 0.6546163859866556,
+      "f1": 0.4626865671641791,
+      "precision": 0.30392156862745096,
+      "recall": 0.96875,
+      "average_precision": 0.21719820336781132,
+      "roc_auc": 0.5935049019607843,
+      "mcc": 0.3435377184538374,
+      "tn": 113,
+      "fp": 142,
+      "fn": 2,
+      "tp": 62,
+      "n": 319,
+      "anomalies": 64,
+      "top_1pct_recall": 0.0,
+      "top_5pct_recall": 0.015625,
+      "top_10pct_recall": 0.046875
+    },
+    "isolation_forest": {
+      "threshold": -0.09571844202440155,
+      "f1": 0.47104247104247104,
+      "precision": 0.3128205128205128,
+      "recall": 0.953125,
+      "average_precision": 0.276546372186395,
+      "roc_auc": 0.6582720588235293,
+      "mcc": 0.3513216977955695,
+      "tn": 121,
+      "fp": 134,
+      "fn": 3,
+      "tp": 61,
+      "n": 319,
+      "anomalies": 64,
+      "top_1pct_recall": 0.015625,
+      "top_5pct_recall": 0.09375,
+      "top_10pct_recall": 0.15625
+    },
+    "supervised_logistic": {
+      "threshold": 0.6773331535794213,
+      "f1": 0.8095238095238095,
+      "precision": 0.8225806451612904,
+      "recall": 0.796875,
+      "average_precision": 0.8842543398793459,
+      "roc_auc": 0.9512867647058822,
+      "mcc": 0.7628127349725561,
+      "tn": 244,
+      "fp": 11,
+      "fn": 13,
+      "tp": 51,
+      "n": 319,
+      "anomalies": 64,
+      "top_1pct_recall": 0.0625,
+      "top_5pct_recall": 0.25,
+      "top_10pct_recall": 0.484375
+    }
+  }
+}

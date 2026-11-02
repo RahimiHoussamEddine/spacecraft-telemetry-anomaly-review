@@ -1,0 +1,37 @@
+name: telemetry-anomaly-review
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.lock.txt
+      - name: Install pinned environment
+        run: |
+          python -m pip install -r requirements.lock.txt
+          python -m pip install --no-deps --no-build-isolation -e .
+      - name: Acquire and validate source data
+        run: |
+          make fetch
+          make validate-data
+      - name: Fit once and evaluate the locked source split
+        run: |
+          make train
+          make evaluate
+      - name: Tests, app interaction, and code quality
+        run: |
+          make test
+          make quality
+          make smoke-app

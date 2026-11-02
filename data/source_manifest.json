@@ -1,0 +1,23 @@
+{
+  "dataset": "OPSSAT-AD",
+  "provider": "KP Labs / ESA OPS-SAT collaborators",
+  "record_url": "https://zenodo.org/records/15108715",
+  "doi": "10.5281/zenodo.15108715",
+  "version": "v2",
+  "license": "MIT",
+  "license_holder": "KP Labs",
+  "license_copyright": "Copyright (c) 2024 KP Labs",
+  "paper_url": "https://arxiv.org/abs/2407.04730",
+  "recorded_files": {
+    "dataset.csv": {
+      "url": "https://zenodo.org/records/15108715/files/dataset.csv?download=1",
+      "expected_md5": "5246fdc5e4630a4cecbf7fb6bc8b795e"
+    },
+    "segments.csv": {
+      "url": "https://zenodo.org/records/15108715/files/segments.csv?download=1",
+      "expected_md5": "72f109630abb933a386106897a631188"
+    }
+  },
+  "downloaded_files": {},
+  "data_use": "Local-only raw telemetry; source license permits use, but raw files are not committed."
+}

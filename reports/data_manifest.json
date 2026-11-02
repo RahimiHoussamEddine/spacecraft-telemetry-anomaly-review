@@ -1,0 +1,19 @@
+{
+  "doi": "10.5281/zenodo.15108715",
+  "version": "v2",
+  "license": "MIT",
+  "files": {
+    "dataset.csv": {
+      "bytes": 507550,
+      "md5": "5246fdc5e4630a4cecbf7fb6bc8b795e",
+      "sha256": "b524177da6f516d5c9f63c7acbc385341f0ad42046ef20c1bed2d25e51b98f02",
+      "reused": false
+    },
+    "segments.csv": {
+      "bytes": 18987091,
+      "md5": "72f109630abb933a386106897a631188",
+      "sha256": "d5201e9e751eb2a53a0ff7c11567dc4239f594ea4b479b2aa66fe67ddcbcb9ba",
+      "reused": false
+    }
+  }
+}
