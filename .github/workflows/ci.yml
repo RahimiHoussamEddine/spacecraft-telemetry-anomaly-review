@@ -20,8 +20,9 @@ jobs:
           cache-dependency-path: requirements.lock.txt
       - name: Install pinned environment
         run: |
-          python -m pip install -r requirements.lock.txt
-          python -m pip install --no-deps --no-build-isolation -e .
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.lock.txt
+          .venv/bin/python -m pip install --no-deps --no-build-isolation -e .
       - name: Acquire and validate source data
         run: |
           make fetch
